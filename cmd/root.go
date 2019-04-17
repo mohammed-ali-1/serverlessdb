@@ -29,6 +29,8 @@ var (
 	cfg     configuration
 )
 
+var ver = "0.1"
+
 type dbConfig struct {
 	Host      string
 	Port      int
@@ -45,8 +47,8 @@ type configuration struct {
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "serverlessdb",
-	Short: "Event-driven databases",
-	Long:  `Event-driven databases`,
+	Short: "Event-driven databases | ver: " + ver,
+	Long:  `Event-driven databases | ver: ` + ver,
 
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(cfg.DB.DbName)
